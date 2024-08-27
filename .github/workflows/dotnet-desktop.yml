@@ -112,4 +112,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: MSIX Package
-        path: ${{ env.C:\Users\maiqu\source\repos\WebApiCursosDotNet/WebApiCursosDotNet.sln }}\AppPackages
+        path: ${{ env.WebApiCursosDotNet.sln }}\AppPackages
