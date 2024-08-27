@@ -83,8 +83,7 @@ jobs:
 
     # Restore the application to populate the obj folder with RuntimeIdentifiers
     - name: Restore the application
-      run: msbuild C:/Users/maiqu/source/repos/WebApiCursosDotNet/WebAPIPrimary.api/WebAPIPrimary.api.csproj /t:Restore /p:Configuration=$env:Configuration
-      env:
+      run: msbuild "C:\Users\maiqu\source\repos\WebApiCursosDotNet\WebAPIPrimary.api\WebAPIPrimary.api.csproj" /t:Restore /p:Configuration=Debug
         Configuration: ${{ matrix.configuration }}
 
     # Decode the base 64 encoded pfx and save the Signing_Certificate
@@ -96,7 +95,7 @@ jobs:
 
     # Create the app package by building and packaging the Windows Application Packaging project
     - name: Create the app package
-      run: msbuild C:/Users/maiqu/source/repos/WebApiCursosDotNet/WebAPIPrimary.api/WebAPIPrimary.api.csproj /p:Configuration=$env:Configuration /p:UapAppxPackageBuildMode=$env:Appx_Package_Build_Mode /p:AppxBundle=$env:Appx_Bundle /p:PackageCertificateKeyFile=GitHubActionsWorkflow.pfx /p:PackageCertificatePassword=${{ secrets.Pfx_Key }}
+      run: msbuild "C:\Users\maiqu\source\repos\WebApiCursosDotNet\WebAPIPrimary.api\WebAPIPrimary.api.csproj" /t:Restore /p:Configuration=Debug
       env:
         Appx_Bundle: Always
         Appx_Bundle_Platforms: x86|x64
@@ -105,7 +104,7 @@ jobs:
 
     # Remove the pfx
     - name: Remove the pfx
-      run: Remove-Item -path C:/Users/maiqu/source/repos/WebApiCursosDotNet/WebAPIPrimary.api/WebAPIPrimary.api.csproj/GitHubActionsWorkflow.pfx
+      run: Remove-Item -path msbuild "C:\Users\maiqu\source\repos\WebApiCursosDotNet\WebAPIPrimary.api\WebAPIPrimary.api.csproj" /GitHubActionsWorkflow.pfx
 
     # Upload the MSIX package: https://github.com/marketplace/actions/upload-a-build-artifact
     - name: Upload build artifacts
