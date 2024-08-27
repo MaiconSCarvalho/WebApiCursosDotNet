@@ -93,6 +93,7 @@ jobs:
         $pfx_cert_byte = [System.Convert]::FromBase64String("${{ secrets.BASE64_ENCODED_PFX }}")
         $certificatePath = "GitHubActionsWorkflow.pfx"
         [IO.File]::WriteAllBytes("$certificatePath", $pfx_cert_byte)
+        Get-ChildItem -Path "D:\a\WebApiCursosDotNet\WebApiCursosDotNet\WebApiCursosDotNet"
     
     # Create the app package by building and packaging the Windows Application Packaging project
     - name: Create the app package
@@ -105,7 +106,7 @@ jobs:
 
     # Remove the pfx
     - name: Remove the pfx
-      run: Remove-Item -Path "D:\a\WebApiCursosDotNet\WebApiCursosDotNet\WebApiCursosDotNet\GitHubActionsWorkflow.pfx"
+      run: Remove-Item -Path "D:\a\WebApiCursosDotNet\WebApiCursosDotNet\WebAPIPrimary.api\GitHubActionsWorkflow.pfx"
 
 
     # Upload the MSIX package: https://github.com/marketplace/actions/upload-a-build-artifact
