@@ -90,31 +90,10 @@ jobs:
     # Decode the base 64 encoded pfx and save the Signing_Certificate
     - name: Decode the pfx
       run: |
-        $pfx_cert_byte = [System.Convert]::FromBase64String("${{ secrets.Base64_Encoded_Pfx }}")
-        $certificatePath = Join-Path -Path $env:Wap_Project_Directory -ChildPath GitHubActionsWorkflow.pfx
-        [IO.File]::WriteAllBytes("$certificatePath", $pfx_cert_byte)
-
-
-# Verificar o valor da variável de ambiente
-Write-Host "Wap_Project_Directory: $env:Wap_Project_Directory"
-
-# Construir o caminho do certificado
-$certificatePath = Join-Path -Path $env:Wap_Project_Directory -ChildPath "GitHubActionsWorkflow.pfx"
-
-# Verificar o caminho do certificado
-Write-Host "Caminho do certificado: $certificatePath"
-
-# Convertendo a string base64 para bytes (substitua a string base64 real aqui)
-$pfx_cert_byte = [System.Convert]::FromBase64String("<secrets.Base64_Encoded_Pfx>")
-
-# Criar o arquivo
-try {
-    [IO.File]::WriteAllBytes($certificatePath, $pfx_cert_byte)
-    Write-Host "Certificado gravado com sucesso em: $certificatePath"
-} catch {
-    Write-Host "Erro ao gravar o certificado: $_"
-}
-
+        $pfx_cert_byte = [System.Convert]::FromBase64String("<secrets.Base64_Encoded_Pfx>")
+         $certificatePath = Join-Path -Path $env:Wap_Project_Directory -ChildPath "GitHubActionsWorkflow.pfx"
+        try {[IO.File]::WriteAllBytes($certificatePath, $pfx_cert_byte) Write-Host "Certificado gravado com sucesso em: $certificatePath"} catch {Write-Host "Erro ao gravar o certificado: $_"}
+      
 
     # Create the app package by building and packaging the Windows Application Packaging project
     - name: Create the app package
