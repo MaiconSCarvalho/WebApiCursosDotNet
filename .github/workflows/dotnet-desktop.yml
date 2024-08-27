@@ -93,6 +93,11 @@ jobs:
         $pfx_cert_byte = [System.Convert]::FromBase64String("${{ secrets.BASE64_ENCODED_PFX }}")
         $certificatePath = "GitHubActionsWorkflow.pfx"
         [IO.File]::WriteAllBytes("$certificatePath", $pfx_cert_byte)
+
+
+ # Remove
+    - name: Incode the pfx
+      run: Remove-Item -Path "Wap_Project_Directory\GitHubActionsWorkflow.pfx"
     
     # Create the app package by building and packaging the Windows Application Packaging project
     - name: Create the app package
