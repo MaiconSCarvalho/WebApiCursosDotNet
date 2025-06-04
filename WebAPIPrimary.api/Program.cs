@@ -28,7 +28,7 @@ app.MapGet("/aluno/{id:int}", async (EscolaDbContext escolaDbContext, [FromQuery
 app.MapGet("/alunos", async (EscolaDbContext escolaDbContext) => {
 
     return await escolaDbContext.Alunos.ToListAsync();
-
 });
+
 
 app.Run();
