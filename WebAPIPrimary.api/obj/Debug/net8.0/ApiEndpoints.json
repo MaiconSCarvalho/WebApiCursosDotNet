@@ -26,7 +26,7 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
+        "Name": "AlunoId",
         "Type": "System.Int32",
         "IsRequired": true
       }
@@ -75,7 +75,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "Microsoft.EntityFrameworkCore.DbSet\u00601[[WebAPIPrimary.api.Entites.Alunos, WebAPIPrimary.api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[WebAPIPrimary.api.Entites.Alunos, WebAPIPrimary.api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "application/json"
         ],
