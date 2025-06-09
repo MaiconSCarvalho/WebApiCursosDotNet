@@ -26,7 +26,7 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "AlunoId",
+        "Name": "id",
         "Type": "System.Int32",
         "IsRequired": true
       }
@@ -44,35 +44,17 @@
   {
     "ContainingType": "Program\u002B\u003C\u003Ec",
     "Method": "\u003C\u003CMain\u003E$\u003Eb__0_2",
-    "RelativePath": "aluno/{nome}",
+    "RelativePath": "alunos",
     "HttpMethod": "GET",
     "IsController": false,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "nome",
+        "Name": "name",
         "Type": "System.String",
-        "IsRequired": true
+        "IsRequired": false
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "WebAPIPrimary.api.Entites.Alunos",
-        "MediaTypes": [
-          "application/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "Program\u002B\u003C\u003Ec",
-    "Method": "\u003C\u003CMain\u003E$\u003Eb__0_4",
-    "RelativePath": "alunos",
-    "HttpMethod": "GET",
-    "IsController": false,
-    "Order": 0,
-    "Parameters": [],
     "ReturnTypes": [
       {
         "Type": "System.Collections.Generic.List\u00601[[WebAPIPrimary.api.Entites.Alunos, WebAPIPrimary.api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
