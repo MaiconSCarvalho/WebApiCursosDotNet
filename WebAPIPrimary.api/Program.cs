@@ -13,22 +13,24 @@ var app = builder.Build();
 app.MapGet("/", () => "Hello World!");
 
 
-app.MapGet("/aluno/{nome}", async (EscolaDbContext escolaDbContext, string nome ) => {
+app.MapGet("/alunos", async (EscolaDbContext escolaDbContext, [FromQuery(Name = "name")] string? alunonome) =>
+{
+    var query = escolaDbContext.Alunos.AsQueryable(); // Começa com a query base
 
-    return await escolaDbContext.Alunos.FirstOrDefaultAsync(x => x.Nome == nome);
+    if (!string.IsNullOrEmpty(alunonome))
+    {
+        // Aplica o filtro SOMENTE se alunonome não for null ou vazio
+        query = query.Where(x => x.Nome.Contains(alunonome));
+    }
 
+    // Executa a query (filtrada ou não)
+    return await query.ToListAsync();
 });
 
-app.MapGet("/aluno/{id:int}", async (EscolaDbContext escolaDbContext, [FromQuery(Name = "AlunoId")] int id) => {
+app.MapGet("/aluno/{id:int}", async (EscolaDbContext escolaDbContext, int id) => {
 
     return await escolaDbContext.Alunos.FirstOrDefaultAsync(x => x.Id == id);
 
 });
-
-app.MapGet("/alunos", async (EscolaDbContext escolaDbContext) => {
-
-    return await escolaDbContext.Alunos.ToListAsync();
-});
-
 
 app.Run();
