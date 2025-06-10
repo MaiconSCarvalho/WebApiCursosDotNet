@@ -19,13 +19,23 @@ app.MapGet("/alunos", async Task<Results<NoContent, Ok<List<Alunos>>>>
     [FromQuery(Name = "name")] string? alunonome) => {
 
     var alunosEntity = await escolaDbContext.Alunos
-                                .Where(x => alunonome ==null || x.Nome.Contains(alunonome))
+                                .Where(x => alunonome == null || x.Nome.ToLower().Contains(alunonome.ToLower()))
                                 .ToListAsync();
     if (alunosEntity.Count <= 0 || alunosEntity == null)
         return TypedResults.NoContent();
     else
-        return TypedResults.Ok(alunosEntity);         
-});  
+        return TypedResults.Ok(alunosEntity);
+
+});
+
+app.MapGet("/alunos/{AlunoId:int}/cursos", async (EscolaDbContext escolaDbContext, int alunoId) =>
+{
+    return await escolaDbContext.Alunos
+                                .Include(aluno => aluno.Cursos)
+                                .FirstOrDefaultAsync(aluno => aluno.Id == alunoId);
+ 
+});
+
 
 app.MapGet("/aluno/{id:int}", async (EscolaDbContext escolaDbContext, int id) => {
 
