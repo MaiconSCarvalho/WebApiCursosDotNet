@@ -57,6 +57,11 @@
     ],
     "ReturnTypes": [
       {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 204
+      },
+      {
         "Type": "System.Collections.Generic.List\u00601[[WebAPIPrimary.api.Entites.Alunos, WebAPIPrimary.api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "application/json"
