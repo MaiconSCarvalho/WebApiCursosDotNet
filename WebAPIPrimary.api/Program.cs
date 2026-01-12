@@ -10,6 +10,8 @@ builder.Services.AddDbContext<EscolaDbContext>(
       o => o.UseSqlite(builder.Configuration["ConnectionStrings:EscolaDbConStr"])
     );
 
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
 var app = builder.Build();
 
 app.MapGet("/", () => "Hello World!");
@@ -35,7 +37,6 @@ app.MapGet("/alunos/{AlunoId:int}/cursos", async (EscolaDbContext escolaDbContex
                                 .FirstOrDefaultAsync(aluno => aluno.Id == alunoId);
  
 });
-
 
 app.MapGet("/aluno/{id:int}", async (EscolaDbContext escolaDbContext, int id) => {
 
