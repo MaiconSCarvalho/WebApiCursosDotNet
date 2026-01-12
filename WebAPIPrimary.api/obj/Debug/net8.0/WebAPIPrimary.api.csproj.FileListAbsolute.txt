@@ -354,11 +354,6 @@ C:\Users\maiqu\WebApiCursosDotNet\WebAPIPrimary.api\obj\Debug\net8.0\WebAPIPrima
 C:\Users\maiqu\WebApiCursosDotNet\WebAPIPrimary.api\obj\Debug\net8.0\WebAPIPrimary.api.sourcelink.json
 C:\Users\maiqu\WebApiCursosDotNet\WebAPIPrimary.api\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\maiqu\WebApiCursosDotNet\WebAPIPrimary.api\obj\Debug\net8.0\staticwebassets.development.json
-C:\Users\maiqu\WebApiCursosDotNet\WebAPIPrimary.api\obj\Debug\net8.0\staticwebassets\msbuild.WebAPIPrimary.api.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Users\maiqu\WebApiCursosDotNet\WebAPIPrimary.api\obj\Debug\net8.0\staticwebassets\msbuild.build.WebAPIPrimary.api.props
-C:\Users\maiqu\WebApiCursosDotNet\WebAPIPrimary.api\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.WebAPIPrimary.api.props
-C:\Users\maiqu\WebApiCursosDotNet\WebAPIPrimary.api\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.WebAPIPrimary.api.props
-C:\Users\maiqu\WebApiCursosDotNet\WebAPIPrimary.api\obj\Debug\net8.0\staticwebassets.pack.json
 C:\Users\maiqu\WebApiCursosDotNet\WebAPIPrimary.api\obj\Debug\net8.0\scopedcss\bundle\WebAPIPrimary.api.styles.css
 C:\Users\maiqu\WebApiCursosDotNet\WebAPIPrimary.api\obj\Debug\net8.0\WebAPIPr.49791605.Up2Date
 C:\Users\maiqu\WebApiCursosDotNet\WebAPIPrimary.api\obj\Debug\net8.0\WebAPIPrimary.api.dll
@@ -366,3 +361,14 @@ C:\Users\maiqu\WebApiCursosDotNet\WebAPIPrimary.api\obj\Debug\net8.0\refint\WebA
 C:\Users\maiqu\WebApiCursosDotNet\WebAPIPrimary.api\obj\Debug\net8.0\WebAPIPrimary.api.pdb
 C:\Users\maiqu\WebApiCursosDotNet\WebAPIPrimary.api\obj\Debug\net8.0\WebAPIPrimary.api.genruntimeconfig.cache
 C:\Users\maiqu\WebApiCursosDotNet\WebAPIPrimary.api\obj\Debug\net8.0\ref\WebAPIPrimary.api.dll
+C:\Users\maiqu\WebApiCursosDotNet\WebAPIPrimary.api\bin\Debug\net8.0\WebAPIPrimary.api.staticwebassets.endpoints.json
+C:\Users\maiqu\WebApiCursosDotNet\WebAPIPrimary.api\bin\Debug\net8.0\AutoMapper.dll
+C:\Users\maiqu\WebApiCursosDotNet\WebAPIPrimary.api\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\maiqu\WebApiCursosDotNet\WebAPIPrimary.api\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\maiqu\WebApiCursosDotNet\WebAPIPrimary.api\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\maiqu\WebApiCursosDotNet\WebAPIPrimary.api\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\maiqu\WebApiCursosDotNet\WebAPIPrimary.api\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Users\maiqu\WebApiCursosDotNet\WebAPIPrimary.api\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Users\maiqu\WebApiCursosDotNet\WebAPIPrimary.api\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\maiqu\WebApiCursosDotNet\WebAPIPrimary.api\obj\Debug\net8.0\swae.build.ex.cache
+C:\Users\maiqu\WebApiCursosDotNet\WebAPIPrimary.api\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

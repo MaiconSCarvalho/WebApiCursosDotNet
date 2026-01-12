@@ -10,6 +10,8 @@ builder.Services.AddDbContext<EscolaDbContext>(
       o => o.UseSqlite(builder.Configuration["ConnectionStrings:EscolaDbConStr"])
     );
 
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
 var app = builder.Build();
 
 app.MapGet("/", () => "Hello World!");
