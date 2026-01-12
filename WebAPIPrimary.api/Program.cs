@@ -36,7 +36,6 @@ app.MapGet("/alunos/{AlunoId:int}/cursos", async (EscolaDbContext escolaDbContex
  
 });
 
-
 app.MapGet("/aluno/{id:int}", async (EscolaDbContext escolaDbContext, int id) => {
 
     return await escolaDbContext.Alunos.FirstOrDefaultAsync(x => x.Id == id);
