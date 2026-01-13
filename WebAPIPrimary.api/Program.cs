@@ -16,6 +16,7 @@ var app = builder.Build();
 
 app.MapGet("/", () => "Hello World!");
 
+
 app.MapGet("/alunos", async Task<Results<NoContent, Ok<List<Alunos>>>> 
     (EscolaDbContext escolaDbContext,
     [FromQuery(Name = "name")] string? alunonome) => {
