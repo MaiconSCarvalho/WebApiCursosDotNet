@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tO+nre9EZVY=",
+  "dgSpecHash": "dC08joF5nOg=",
   "success": true,
-  "projectFilePath": "C:\\Users\\maiqu\\WebApiCursosDotNet\\WebAPIPrimary.api\\WebAPIPrimary.api.csproj",
+  "projectFilePath": "C:\\Users\\maiqu\\MinimalAPI\\WebAPIPrimary.api\\WebAPIPrimary.api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\maiqu\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\maiqu\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
