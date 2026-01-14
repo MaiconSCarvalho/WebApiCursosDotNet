@@ -19,6 +19,30 @@
   },
   {
     "ContainingType": "Program\u002B\u003C\u003Ec",
+    "Method": "\u003C\u003CMain\u003E$\u003Eb__0_3",
+    "RelativePath": "aluno/{alunoId:int}/cursos",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "alunoId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[WebAPIPrimary.api.Models.CursoDTO, WebAPIPrimary.api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Program\u002B\u003C\u003Ec",
     "Method": "\u003C\u003CMain\u003E$\u003Eb__0_4",
     "RelativePath": "aluno/{id:int}",
     "HttpMethod": "GET",
@@ -33,10 +57,8 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "WebAPIPrimary.api.Entites.Alunos",
-        "MediaTypes": [
-          "application/json"
-        ],
+        "Type": "System.Void",
+        "MediaTypes": [],
         "StatusCode": 200
       }
     ]
@@ -48,48 +70,11 @@
     "HttpMethod": "GET",
     "IsController": false,
     "Order": 0,
-    "Parameters": [
-      {
-        "Name": "name",
-        "Type": "System.String",
-        "IsRequired": false
-      }
-    ],
+    "Parameters": [],
     "ReturnTypes": [
       {
         "Type": "System.Void",
         "MediaTypes": [],
-        "StatusCode": 204
-      },
-      {
-        "Type": "System.Collections.Generic.List\u00601[[WebAPIPrimary.api.Entites.Alunos, WebAPIPrimary.api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "application/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "Program\u002B\u003C\u003Ec",
-    "Method": "\u003C\u003CMain\u003E$\u003Eb__0_3",
-    "RelativePath": "alunos/{AlunoId:int}/cursos",
-    "HttpMethod": "GET",
-    "IsController": false,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "AlunoId",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[WebAPIPrimary.api.Models.CursoDTO, WebAPIPrimary.api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "application/json"
-        ],
         "StatusCode": 200
       }
     ]
