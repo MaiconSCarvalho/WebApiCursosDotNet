@@ -1,8 +1,10 @@
+using AutoMapper;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WebAPIPrimary.api.DbContexts;
 using WebAPIPrimary.api.Entites;
+using WebAPIPrimary.api.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -31,11 +33,14 @@ app.MapGet("/alunos", async Task<Results<NoContent, Ok<List<Alunos>>>>
 
 });
 
-app.MapGet("/alunos/{AlunoId:int}/cursos", async (EscolaDbContext escolaDbContext, int alunoId) =>
+app.MapGet("/alunos/{AlunoId:int}/cursos", async (
+    EscolaDbContext escolaDbContext,
+    IMapper mapper,
+    int alunoId) =>
 {
-    return await escolaDbContext.Alunos
+    return mapper.Map<IEnumerable<CursoDTO>> (await escolaDbContext.Alunos
                                 .Include(aluno => aluno.Cursos)
-                                .FirstOrDefaultAsync(aluno => aluno.Id == alunoId);
+                                .FirstOrDefaultAsync(aluno => aluno.Id == alunoId));
  
 });
 

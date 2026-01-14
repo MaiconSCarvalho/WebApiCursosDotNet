@@ -86,7 +86,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "WebAPIPrimary.api.Entites.Alunos",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[WebAPIPrimary.api.Models.CursoDTO, WebAPIPrimary.api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "application/json"
         ],
